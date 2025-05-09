@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Laboratorio de Electrónica</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    
+  <div class="dashboard">
+    <header>
+      <div class="logo-container">
+        <img src="/sources/Logo.png" alt="Logo SENA" class="logo-sena">
+      </div>
+          <h1>LABORATORIO DE ELECTRÓNICA</h1>
+          <p>Simulación, teoría y gestión</p>
+        </div>
+      </div>
+    </header>    
+
+    <div class="cards">
+      <div class="card" onclick="mostrarSeccion('teoria')">
+        <img src="/sources/Teoria.png" alt="Teoría">
+        <span>Teoría</span>
+      </div>
+      <div class="card" onclick="mostrarSeccion('simulador')">
+        <img src="/sources/simulador.png" alt="Simulador">
+        <span>Simulador</span>
+      </div>
+      <div class="card" onclick="mostrarSeccion('inventario')">
+        <img src="/sources/Inventario.png" alt="Inventario">
+        <span>Inventario</span>
+      </div>
+      <div class="card" onclick="mostrarSeccion('ejercicios')">
+        <img src="/sources/practica.png" alt="Prácticas">
+        <span>Prácticas</span>
+      </div>
+    </div>
+
+    <section id="contenido">
+      <!-- Aquí se cargará el contenido dinámicamente -->
+    </section>
+  </div>
+
+  <script>
+    function mostrarSeccion(seccion) {
+      document.getElementById('contenido').innerHTML = `<h2>${seccion.toUpperCase()}</h2><p>Contenido en construcción...</p>`;
+    }
+  </script>
+
 </body>
 </html>
