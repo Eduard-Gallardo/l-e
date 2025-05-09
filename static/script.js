@@ -83,3 +83,71 @@ document.addEventListener('DOMContentLoaded', function() {
     // Resto del código JavaScript permanece igual
     // ...
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    const togglePassword = document.querySelector('.toggle-password');
+    const passwordInput = document.getElementById('password');
+    
+    // Mostrar/ocultar contraseña
+    togglePassword.addEventListener('click', function() {
+        const icon = this.querySelector('i');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    });
+    
+    // Validación del formulario
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = passwordInput.value;
+        const rememberMe = document.getElementById('rememberMe').checked;
+        
+        // Validaciones básicas
+        if (!username || !email || !password) {
+            alert('Por favor completa todos los campos');
+            return;
+        }
+        
+        if (!validateEmail(email)) {
+            alert('Por favor ingresa un correo electrónico válido');
+            return;
+        }
+        
+        // Simular envío del formulario
+        console.log('Datos del formulario:', {
+            username,
+            email,
+            password,
+            rememberMe
+        });
+        
+        // Mostrar mensaje de éxito (en una aplicación real, redirigiría al dashboard)
+        alert('Inicio de sesión exitoso!');
+        loginForm.reset();
+    });
+    
+    // Función para validar email
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+    
+    // Efecto hover para botones e inputs
+    const interactiveElements = document.querySelectorAll('button, input, a');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', function() {
+            this.style.transition = 'all 0.3s ease';
+        });
+    });
+});

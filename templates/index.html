@@ -13,9 +13,9 @@
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="../static/styles.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar">1
+<body data-bs-spy="scroll" data-bs-target="#navbar">
     <!-- Barra de navegación -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="../images/logoSena.png" alt="Logo SENA" class="d-inline-block align-top logo">
@@ -25,19 +25,35 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#titulo">Inicio</a>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    
+                    <!-- Menú desplegable de Servicios -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-cogs me-1"></i> Servicios
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="servicios.html"><i class="fas fa-list-alt me-2"></i>Nuestros Servicios</a></li>
+                            <li><a class="dropdown-item" href="mapa_procesos.html"><i class="fas fa-project-diagram me-2"></i>Mapa de Procesos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-calendar-alt me-2"></i>Agendar Cita</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#mision">Misión</a>
+                    
+                    <!-- Menú de perfil desplegable -->
+                    <li class="nav-item dropdown ms-lg-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle fs-5"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="inicio_sesion.html""><i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="registro.html" ><i class="fas fa-user-plus me-2"></i>Registrarse</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#vision">Visión</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#politica">Política</a>
-                    </li>
+                    
+                    <!-- Botón de modo oscuro -->
                     <li class="nav-item ms-2">
                         <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary">
                             <i class="fas fa-moon"></i>
@@ -47,6 +63,7 @@
             </div>
         </div>
     </nav>
+    
     <!-- Sección Hero -->
     <section id="titulo" class="hero-section">
         <div class="hero-overlay"></div>
