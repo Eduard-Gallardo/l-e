@@ -1,0 +1,155 @@
+{% extends 'base.html'}
+{% block content %}
+    <!-- Contenido principal -->
+    <div class="container py-5" style="margin-top: 80px;">
+        <h1 class="text-center mb-4">Mapa de Procesos</h1>
+        <div class="image-container">
+            <img src="../images/mapa_procesos.png" alt="Mapa de Procesos" usemap="#mapaProcesos" class="img-fluid rounded shadow">
+            <map name="mapaProcesos">
+                <area shape="rect" coords="50,50,200,200" href="#proceso1" alt="Proceso 1">
+                <area shape="circle" coords="300,300,50" href="#proceso2" alt="Proceso 2">
+                <area shape="poly" coords="400,400,450,450,400,500" href="#proceso3" alt="Proceso 3">
+            </map>
+            <!-- Tooltips -->
+            <div class="tooltip" style="top: 50px; left: 50px;">Proceso 1</div>
+            <div class="tooltip" style="top: 300px; left: 300px;">Proceso 2</div>
+            <div class="tooltip" style="top: 400px; left: 400px;">Proceso 3</div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-sena px-4 py-2 rounded-pill">
+                <i class="fas fa-arrow-left me-2"></i>Volver al inicio
+            </a>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Dynamic content loading
+        function mostrarSeccion(seccion) {
+            const contenido = document.getElementById('contenido-dinamico');
+            
+            // Simple loading animation
+            contenido.innerHTML = `
+                <div class="text-center">
+                    <div class="spinner-border text-success mb-3" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                    <p>Cargando módulo...</p>
+                </div>
+            `;
+            
+            // Simulate loading delay
+            setTimeout(() => {
+                let contenidoHTML = '';
+                let icono = '';
+                
+                switch(seccion) {
+                    case 'inventario':
+                        icono = 'fas fa-boxes';
+                        contenidoHTML = `
+                            <div>
+                                <h2><i class="${icono} me-2"></i>Inventario</h2>
+                                <p class="lead">Gestión completa de los recursos del laboratorio</p>
+                                <hr>
+                                <div class="row mt-4">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h5><i class="fas fa-microchip me-2"></i>Componentes</h5>
+                                                <p>Registro y control de componentes electrónicos.</p>
+                                                <button class="btn btn-sm btn-outline-success">Ver componentes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h5><i class="fas fa-tools me-2"></i>Equipos</h5>
+                                                <p>Gestión de equipos de medición y prueba.</p>
+                                                <button class="btn btn-sm btn-outline-success">Ver equipos</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h5><i class="fas fa-warehouse me-2"></i>Almacén</h5>
+                                                <p>Control de existencias y ubicaciones.</p>
+                                                <button class="btn btn-sm btn-outline-success">Ver almacén</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h5><i class="fas fa-history me-2"></i>Historial</h5>
+                                                <p>Movimientos y transacciones del inventario.</p>
+                                                <button class="btn btn-sm btn-outline-success">Ver historial</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'calibracion':
+                        icono = 'fas fa-tachometer-alt';
+                        contenidoHTML = `
+                            <div>
+                                <h2><i class="${icono} me-2"></i>Calibración</h2>
+                                <p class="lead">Sistema de gestión de calibración de equipos</p>
+                                <hr>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle me-2"></i>Este módulo está actualmente en desarrollo. Pronto estará disponible.
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    case 'documentacion':
+                        icono = 'fas fa-folder-open';
+                        contenidoHTML = `
+                            <div>
+                                <h2><i class="${icono} me-2"></i>Documentación</h2>
+                                <p class="lead">Gestión de documentos y registros de calidad</p>
+                                <hr>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle me-2"></i>Este módulo está actualmente en desarrollo. Pronto estará disponible.
+                                </div>
+                            </div>
+                        `;
+                        break;
+                    default:
+                        contenidoHTML = `
+                            <div class="text-center">
+                                <i class="fas fa-exclamation-triangle fa-3x text-warning mb-3"></i>
+                                <h3 class="text-warning">Módulo no encontrado</h3>
+                                <p>El módulo seleccionado no está disponible en este momento.</p>
+                                <button class="btn btn-outline-secondary" onclick="mostrarSeccion('default')">
+                                    <i class="fas fa-arrow-left me-2"></i>Volver
+                                </button>
+                            </div>
+                        `;
+                }
+                
+                contenido.innerHTML = contenidoHTML;
+            }, 800);
+        }
+    </script>   
+{% endblock %}

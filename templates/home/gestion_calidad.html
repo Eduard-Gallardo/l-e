@@ -1,0 +1,209 @@
+{% extends 'base.html'}
+{}
+    <!-- Barra de navegación -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../images/logoSena.png" alt="Logo SENA" class="d-inline-block align-top logo" style="height: 40px;">
+                <span class="text-success fw-bold">Laboratorio de Electrónica</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="servicios.html"><i class="fas fa-cogs me-1"></i>Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="registro.html"><i class="fas fa-user-plus me-1"></i>Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="inicio_sesion.html"><i class="fas fa-sign-in-alt me-1"></i>Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="titulo" class="hero-section" style="background-image: url('../images/hero-quality.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">Gestión de Calidad</h1>
+            <p class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">Asegurando la excelencia en cada proceso</p>
+            <a href="#cards" class="btn btn-success btn-lg btn-custom animate__animated animate__fadeInUp animate__delay-2s">
+                <i class="fas fa-arrow-down me-2"></i>Explorar
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección de Introducción -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title">Nuestro Sistema de Gestión de Calidad</h2>
+                    <p>Implementamos un sistema integral de gestión de calidad que garantiza la excelencia en todos nuestros procesos, desde el control de inventario hasta la certificación de equipos.</p>
+                    <p>Nuestro compromiso con la calidad nos permite ofrecer servicios confiables y resultados precisos en cada uno de nuestros proyectos.</p>
+                    <button class="btn btn-outline-success">Más información</button>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Control de calidad" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Tarjetas -->
+    <section id="cards" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Módulos de Gestión</h2>
+            <p class="text-center mb-5">Seleccione un módulo para acceder a sus funciones</p>
+            
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" onclick="mostrarSeccion('inventario')">
+                        <img src="../images/inventario.png" class="card-img-top" alt="Inventario">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Inventario</h5>
+                            <p class="card-text">Gestión completa de equipos, componentes y materiales del laboratorio.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-sm btn-outline-success w-100">Acceder</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" onclick="mostrarSeccion('calibracion')">
+                        <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a7e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Calibración">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Calibración</h5>
+                            <p class="card-text">Registro y seguimiento de equipos calibrados y certificados.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-sm btn-outline-success w-100">Acceder</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" onclick="mostrarSeccion('documentacion')">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Documentación">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Documentación</h5>
+                            <p class="card-text">Gestión de manuales, procedimientos y registros de calidad.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-sm btn-outline-success w-100">Acceder</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Características -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Beneficios Clave</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center p-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Trazabilidad</h4>
+                        <p>Seguimiento completo de todos los equipos y procesos para garantizar la calidad en cada etapa.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Indicadores</h4>
+                        <p>Métricas y estadísticas en tiempo real para la toma de decisiones informadas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4>Reportes</h4>
+                        <p>Generación automática de informes y documentación para auditorías.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contenido Dinámico -->
+    <section id="contenido" class="py-5">
+        <div class="container">
+            <div id="contenido-dinamico" class="dynamic-content">
+                <div class="text-center">
+                    <i class="fas fa-mouse-pointer fa-3x text-muted mb-3"></i>
+                    <h3 class="text-muted">Seleccione un módulo para comenzar</h3>
+                    <p class="text-muted">Haga clic en una de las tarjetas de arriba para ver el contenido específico</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-logos mb-3 d-flex justify-content-center justify-content-lg-start align-items-center">
+                        <img src="../images/logoSena.png" alt="Logo SENA" class="footer-logo me-2" style="height: 40px;">
+                        <span class="text-white">Laboratorio de Electrónica</span>
+                    </div>
+                    <p class="text-white-50">Comprometidos con la excelencia técnica y la formación profesional de calidad.</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-4">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="servicios.html" class="text-white-50 text-decoration-none">Servicios</a></li>
+                        <li class="mb-2"><a href="registro.html" class="text-white-50 text-decoration-none">Registro</a></li>
+                        <li><a href="inicio_sesion.html" class="text-white-50 text-decoration-none">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">Contacto</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Dirección del Centro</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> contacto@laboratorioelectronica.edu</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">© 2025 Laboratorio de Electrónica - Todos los derechos reservados</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white-50"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS personalizado -->
+    <script>
+        
+    </script>
+</body>
+</html> 

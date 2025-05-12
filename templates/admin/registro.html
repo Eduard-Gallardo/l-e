@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro De Usuarios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg">
+                <!-- Encabezado del Modal -->
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="registerModalLabel">
+                        <i class="fas fa-user-plus me-2"></i>Registrarse
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Cuerpo del Modal -->
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <img src="../images/logoSena.png" alt="Logo SENA" class="img-fluid" style="max-width: 100px;">
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control rounded-pill" id="registerName" placeholder="Ingresa tu nombre completo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control rounded-pill" id="registerEmail" placeholder="Ingresa tu correo electrónico" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control rounded-pill" id="registerPassword" placeholder="Crea una contraseña" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerConfirmPassword" class="form-label">Confirmar contraseña</label>
+                            <input type="password" class="form-control rounded-pill" id="registerConfirmPassword" placeholder="Confirma tu contraseña" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 rounded-pill">Registrarse</button>
+                    </form>
+                </div>
+                <!-- Pie del Modal -->
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">¿Ya tienes cuenta? 
+                        <a href="inicio_sesion.html" class="text-success fw-bold">Inicia sesión</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+            registerModal.show();
+
+            // Redirigir al inicio al cerrar el modal
+            var modalElement = document.getElementById('registerModal');
+            modalElement.addEventListener('hidden.bs.modal', function () {
+                window.location.href = 'index.html'; // Redirige al inicio
+            });
+        });
+    </script>
+</body>
+</html> 
