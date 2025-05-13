@@ -1,159 +1,156 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio de Electrónica</title>
-
-</head>
-<body data-bs-spy="scroll" data-bs-target="#navbar">
-    <!-- Barra de navegación -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="../images/logoSena.png" alt="Logo SENA" class="d-inline-block align-top logo">
-                <span class="brand-text">Laboratorio de Electrónica</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    
-                    <!-- Menú desplegable de Servicios -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-cogs me-1"></i> Servicios
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="servicios.html"><i class="fas fa-list-alt me-2"></i>Nuestros Servicios</a></li>
-                            <li><a class="dropdown-item" href="mapa_procesos.html"><i class="fas fa-project-diagram me-2"></i>Mapa de Procesos</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="gestion_calidad.html"><i class="bi bi-boxes"></i>Gestion de Calidad</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Menú de perfil desplegable -->
-                    <li class="nav-item dropdown ms-lg-2">
-                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user-circle fs-5"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                            <li><a class="dropdown-item" href="inicio_sesion.html""><i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión</a></li>
-                            <li><a class="dropdown-item" href="registro.html" ><i class="fas fa-user-plus me-2"></i>Registrarse</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Botón de modo oscuro -->
-                    <li class="nav-item ms-2">
-                        <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Sección Hero -->
-    <section id="titulo" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 text-center">
-                    <h1 class="display-3 fw-bold text-white mb-4">Laboratorio de Electrónica</h1>
-                    <p class="lead text-white mb-5">Innovación y tecnología al servicio de la comunidad</p>
-                    <a href="#mision" class="btn btn-outline-light btn-lg px-4 py-2 rounded-pill scroll-link">
-                        <i class="fas fa-chevron-down me-2"></i>Conoce más
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Misión -->
-    <section id="mision" class="section-white">
-        <div class="container">
-            <div class="row justify-content-center py-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title mb-5">Misión</h2>
-                    <div class="section-content">
-                        <p class="section-text">
-                            Proporcionar a los aprendices y clientes de diversos sectores del occidente del Huila
-                            servicios de diseño, fabricación y desarrollo de dispositivos en el área de electrónica,
-                            utilizando equipos modernos y tecnología de vanguardia.
-                        </p>
-                        <p class="section-text">
-                            Nuestro compromiso es fomentar en los aprendices la aplicación práctica de la tecnología, 
-                            ofreciendo oportunidades de aprendizaje experiencial, e incentivar en la comunidad la 
-                            tecnificación de los procesos productivos.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Visión -->
-    <section id="vision" class="section-light">
-        <div class="container">
-            <div class="row justify-content-center py-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title mb-5">Visión</h2>
-                    <div class="section-content">
-                        <p class="section-text">
-                            Para el año 2030, consolidarnos como un referente en el campo de la electrónica y como
-                            uno de los principales motores de cambio y progreso en el occidente del Huila.
-                        </p>
-                        <p class="section-text">
-                            Orientamos de manera efectiva a clientes y aprendices en la adopción y aplicación de 
-                            soluciones tecnológicas que impulsen la productividad, competitividad y sostenibilidad 
-                            en diversos sectores.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Política de Calidad -->
-    <section id="politica" class="section-white">
-        <div class="container">
-            <div class="row justify-content-center py-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title mb-5">Política de Calidad</h2>
-                    <div class="section-content">
-                        <p class="section-text">
-                            El Laboratorio de Electrónica del CDTAH establece como su política ofrecer servicios de
-                            diseño, fabricación y desarrollo de dispositivos electrónicos de alta calidad a aprendices y
-                            clientes de diversos sectores del occidente del Huila.
-                        </p>
-                        <p class="section-text">
-                            Nos enfocamos a incentivar el aprendizaje práctico en el área de electrónica y en satisfacer 
-                            las necesidades de transformación tecnológica de las industrias, asegurando el cumplimiento 
-                            de los requisitos establecidos y reafirmando nuestro compromiso con la mejora continua.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Footer -->
-<footer class="footer bg-dark py-4">
-    <div class="container text-center">
-        <div class="footer-logos mb-3">
-            <img src="../images/logoSena.png" alt="Logo SENA" class="footer-logo">
-            <span class="text-white">Laboratorio de Electrónica</span>
-        </div>
-        <p class="text-white mb-0">© 2025 Laboratorio de Electrónica - Todos los derechos reservados</p>
+{% extends "base.html" %} {% block content %}
+<!-- Sección Hero con Carrusel -->
+<section id="titulo" class="hero-section position-relative">
+  <div id="carouselHero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="{{ url_for('static', filename='sources/inicio1.png') }}"
+          class="d-block w-100"
+          alt="Imagen 1"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ url_for('static', filename='sources/inicio2.png') }}"
+          class="d-block w-100"
+          alt="Imagen 2"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ url_for('static', filename='sources/inicio3.png') }}"
+          class="d-block w-100"
+          alt="Imagen 3"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ url_for('static', filename='sources/inicio4.png') }}"
+          class="d-block w-100"
+          alt="Imagen 4"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ url_for('static', filename='sources/inicio5.png') }}"
+          class="d-block w-100"
+          alt="Imagen 5"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ url_for('static', filename='sources/inicio6.png') }}"
+          class="d-block w-100"
+          alt="Imagen 6"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ url_for('static', filename='sources/inicio7.png') }}"
+          class="d-block w-100"
+          alt="Imagen 7"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ url_for('static', filename='sources/inicio8.png') }}"
+          class="d-block w-100"
+          alt="Imagen 8"
+        />
+      </div>
     </div>
-</footer>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- JS personalizado -->
-<script src="../static/script.js"></script>
-</body>
-</html>
+  <!-- Contenedor del texto -->
+  <div class="container text-center position-relative">
+    <h1 class="display-3 fw-bold mb-4 titulo-principal">Laboratorio de Electrónica</h1>
+    <p class="lead mb-5 subtitulo-principal">Innovación y tecnología al servicio de la comunidad</p>
+    <a href="#mision" class="btn btn-outline-light btn-lg px-4 py-2 rounded-pill scroll-link">
+      <i class="fas fa-chevron-down me-2"></i>Conoce más
+    </a>
+  </div>
+</section>
+
+<!-- Sección Misión -->
+<section id="mision" class="section-white">
+  <div class="container">
+    <div class="row justify-content-center py-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title mb-5">Misión</h2>
+        <div class="section-content">
+          <p class="section-text">
+            Proporcionar a los aprendices y clientes de diversos sectores del
+            occidente del Huila servicios de diseño, fabricación y desarrollo de
+            dispositivos en el área de electrónica, utilizando equipos modernos
+            y tecnología de vanguardia.
+          </p>
+          <p class="section-text">
+            Nuestro compromiso es fomentar en los aprendices la aplicación
+            práctica de la tecnología, ofreciendo oportunidades de aprendizaje
+            experiencial, e incentivar en la comunidad la tecnificación de los
+            procesos productivos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Visión -->
+<section id="vision" class="section-light">
+  <div class="container">
+    <div class="row justify-content-center py-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title mb-5">Visión</h2>
+        <div class="section-content">
+          <p class="section-text">
+            Para el año 2030, consolidarnos como un referente en el campo de la
+            electrónica y como uno de los principales motores de cambio y
+            progreso en el occidente del Huila.
+          </p>
+          <p class="section-text">
+            Orientamos de manera efectiva a clientes y aprendices en la adopción
+            y aplicación de soluciones tecnológicas que impulsen la
+            productividad, competitividad y sostenibilidad en diversos sectores.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Política de Calidad -->
+<section id="politica" class="section-white">
+  <div class="container">
+    <div class="row justify-content-center py-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title mb-5">Política de Calidad</h2>
+        <div class="section-content">
+          <p class="section-text">
+            El Laboratorio de Electrónica del CDTAH establece como su política
+            ofrecer servicios de diseño, fabricación y desarrollo de
+            dispositivos electrónicos de alta calidad a aprendices y clientes de
+            diversos sectores del occidente del Huila.
+          </p>
+          <p class="section-text">
+            Nos enfocamos a incentivar el aprendizaje práctico en el área de
+            electrónica y en satisfacer las necesidades de transformación
+            tecnológica de las industrias, asegurando el cumplimiento de los
+            requisitos establecidos y reafirmando nuestro compromiso con la
+            mejora continua.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

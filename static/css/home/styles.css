@@ -1,8 +1,8 @@
 /* Paleta de verdes profesional */
 :root {
     --bs-primary: #3CB371;   /* MediumSeaGreen */
-    --bs-success: #43A047;   /* Verde profesional */
-    --bs-secondary: #E8F5E9; /* Verde muy claro para fondos */
+    --bs-success: #000;   /* Verde profesional */
+    --bs-secondary: #ffffff; /* Blanco puro */
     --bs-dark: #1B5E20;      /* Verde oscuro para detalles */
     --bs-light: #F8FFF8;     /* Blanco verdoso */
     --bs-accent: #81C784;    /* Verde acento */
@@ -48,19 +48,15 @@
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(120deg, var(--bs-primary) 60%, var(--bs-accent) 100%);
-    color: white;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    overflow: hidden;
+    padding-top: 5rem; /* Espaciado superior para evitar que el texto quede sobrepuesto */
+    padding-bottom: 5rem; /* Espaciado inferior para separar del contenido siguiente */
+    background: none; /* Elimina cualquier fondo adicional */
 }
 .hero-overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(34, 139, 34, 0.25); /* Verde translúcido */
-    z-index: 1;
+    display: none; /* Ocultar el overlay si no es necesario */
 }
 .hero-section .container,
 .hero-section .row,
@@ -68,6 +64,35 @@
 .hero-section .col-lg-8 {
     position: relative;
     z-index: 2;
+}
+.container.h-100 {
+    height: auto; /* Ajustar la altura automáticamente */
+    padding: 2rem 0; /* Espaciado interno para el contenido */
+}
+
+.carousel-inner img {
+    height: 100vh; /* Ocupa toda la altura de la sección */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+#carouselHero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Coloca el carrusel detrás del texto */
+}
+
+.container.text-center {
+    position: relative;
+    z-index: 2; /* Coloca el texto encima del carrusel */
+    color: #fff; /* Asegura que el texto sea visible sobre las imágenes */
+    margin-top: 2rem; /* Espaciado superior para el texto */
+}
+
+.hero-section h1, .hero-section p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Agrega sombra para mejorar la legibilidad */
 }
 
 /* Botones */
@@ -82,10 +107,24 @@
     color: #fff !important;
 }
 
+/* Estilo para el botón "Conoce más" */
+.scroll-link {
+    border: 2px solid var(--bs-primary); /* Contorno con el color primario */
+    color: #fff; /* Texto base en negro */
+    transition: all 0.3s ease; /* Transición suave para hover */
+}
+
+.scroll-link:hover {
+    background-color: var(--bs-primary); /* Cambia el fondo al color primario al pasar el mouse */
+    color: #000; /* Cambia el texto a blanco al pasar el mouse */
+    border-color: var(--bs-primary); /* Mantiene el contorno */
+}
+
 /* Secciones */
 .section-title {
-    color: var(--bs-primary);
-    font-weight: 700;
+    font-size: 5rem; /* Aumenta el tamaño de los títulos de las secciones */
+    color: var(--bs-dark); /* Cambia el color a verde oscuro */
+    font-weight: 700; /* Mantén el grosor del texto */
     margin-bottom: 1.5rem;
 }
 .section-white {
@@ -202,7 +241,7 @@ h1 {
     font-weight: var(--font-weight-bold);
     line-height: 1.2;
     margin-bottom: var(--space-md);
-    color: var(--color-white);
+    color: var(--color-black);
 }
 h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-semibold);
@@ -467,4 +506,16 @@ p {
     .service-card {
         margin-bottom: var(--space-md);
     }
+}
+
+.titulo-principal {
+  color: #ffffff;
+  -webkit-text-stroke: 2px #ffffff;
+  text-stroke: 1px #000000;
+}
+
+.subtitulo-principal {
+    font-size: 2rem; /* Aumenta el tamaño del texto */
+    color: var(--bs-dark); /* Cambia el color a verde oscuro */
+    font-weight: 500; /* Opcional: ajusta el grosor del texto */
 }
